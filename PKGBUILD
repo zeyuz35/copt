@@ -40,14 +40,16 @@ EOF
   install -Dm644 "$srcdir/copt80/copt-eula_en.pdf" "$pkgdir/usr/share/licenses/$pkgname/copt-eula_en.pdf" 2>/dev/null || true
   
   # Notify user about license requirements
-  echo ""
-  echo "=========================================="
-  echo "COPT requires license files to function."
-  echo "Please apply for a license at: https://www.shanshu.ai/copt"
-  echo ""
-  echo "After obtaining license.dat and license.key:"
-  echo "  Recommended: Move them to \$HOME/copt/"
-  echo "  Alternative: Set COPT_LICENSE_DIR to point to license directory"
-  echo "=========================================="
-  echo ""
+  cat <<EOF
+
+==========================================
+COPT requires license files to function.
+Please apply for a license at: https://www.shanshu.ai/copt
+
+After obtaining license.dat and license.key:
+  Recommended: Move them to \$HOME/copt/
+  Alternative: Set COPT_LICENSE_DIR to point to license directory
+==========================================
+
+EOF
 }
